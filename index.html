@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="main">
+        <!-- HERO SECTION -->
+        <section id="hero">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- SLIDE 1 -->
+                    <div class="swiper-slide">
+                        <img src="/images/heroImg.png" alt="hero1">
+                        <div class="more-products">
+                            <div class="prod"></div>
+                            <div class="prod"></div>
+                            <div class="prod"></div>
+                        </div>
+                        <div id="desc-box">
+                            <h1>HOT ROSE VINTAGE</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi quod delectus porro,
+                                officiis sequi laborum quibusdam tempora, veritatis, iusto commodi necessitatibus eaque.
+                                Reprehenderit ad deleniti inventore in aliquid, asperiores facere.</p>
+                            <h3>$200.00</h3>
+                            <button class="exploreBtn" data-product-id="1">EXPLORE MORE</button>
+                            <button class="addToCartBtn" data-product-id="1">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- SLIDE 2 -->
+                    <div class="swiper-slide">
+                        <img src="/images/perfume2.png" alt="hero2">
+                        <div class="more-products">
+                            <div class="prod"></div>
+                            <div class="prod"></div>
+                            <div class="prod"></div>
+                        </div>
+                        <div id="desc-box">
+                            <h1>OCEAN MAN</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi quod delectus porro,
+                                officiis sequi laborum quibusdam tempora, veritatis, iusto commodi necessitatibus eaque.
+                                Reprehenderit ad deleniti inventore in aliquid, asperiores facere.</p>
+                            <h3>$200.00</h3>
+                            <button class="exploreBtn" data-product-id="2">EXPLORE MORE</button>
+                            <button class="addToCartBtn" data-product-id="2">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- SLIDE 3 -->
+                    <div class="swiper-slide">
+                        <img id="mainImage" src="/images/perfume4.webp" alt="hero3">
+                        <div class="more-products">
+                            <div class="prod" id="prod7" data-image="/images/perfume4.webp"></div>
+                            <div class="prod" id="prod8" data-image="/images/perfume4_2.webp"></div>
+                            <div class="prod" id="prod9" data-image="/images/perfume4_3.webp"></div>
+                        </div>
+                        <div id="desc-box">
+                            <h1>OUD NUIT</h1>
+                            <p>Smell divine with the La French Oud Nuit Eau De Parfum (100ml). This refreshing perfume
+                                is infused with spicy, floral, and musky notes to exude a delightful scent. The La
+                                French perfume is a perfect choice for daily use, and it keeps you feeling fresh and
+                                confident all day long.</p>
+                            <h3>₹200.00</h3>
+                            <button class="exploreBtn" data-product-id="3">EXPLORE MORE</button>
+                            <button class="addToCartBtn" data-product-id="3">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next" style="color: rgba(255, 255, 255, 0.564);"></div>
+                <div class="swiper-button-prev" style="color: rgba(255, 255, 255, 0.564);"></div>
+
+            </div>
+        </section>
+        <!-- FEATURE PRODUCTS -->
+        <section id="product">
+            <h1>Featured Collection</h1>
+            <div id="f-p">
+                <div class="items">
+                    <img src="./images/heroImg.png" alt="">
+                    <div class="details">
+                        <h3>Item name</h3>
+                        <p>$200</p>
+                        <button class="addToCartBtn" data-product-id="4">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="items">
+                    <img src="/images/perfume2.png" alt="">
+                    <div class="details">
+                        <h3>Item name</h3>
+                        <p>$200</p>
+                        <button class="addToCartBtn" data-product-id="5">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="items">
+                    <img src="/images/perfume3.webp" alt="">
+                    <div class="details">
+                        <h3>Item name</h3>
+                        <p>$200</p>
+                        <button class="addToCartBtn" data-product-id="6">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="items">
+                    <img src="" alt="">
+                    <div class="details">
+                        <h3>Item name</h3>
+                        <p>$200</p>
+                        <button class="addToCartBtn" data-product-id="7">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="items">
+                    <img src="" alt="">
+                    <div class="details">
+                        <h3>Item name</h3>
+                        <p>$200</p>
+                        <button class="addToCartBtn" data-product-id="8">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart dropdown -->
+        <div class="cart-dropdown">
+            <button class="cart-button">Cart</button>
+            <div class="cart-content">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var exploreButtons = document.querySelectorAll('.exploreBtn');
+        exploreButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                // Get the product ID from the data-product-id attribute
+                var productId = this.getAttribute('data-product-id');
+                // Navigate to the product details page with the specific product ID
+                window.location.href = 'product_details.php?id=' + productId;
+            });
+        });
+
+        // Function to handle adding to cart and updating the dropdown
+        function addToCart(productId) {
+            axios.get('add_to_cart.php?id=' + productId)
+                .then(function (response) {
+                    // Update cart count or perform other actions if needed
+                    console.log('Product added to cart');
+                    updateCartDropdown();
+                })
+                .catch(function (error) {
+                    console.error('Error adding to cart:', error);
+                });
+        }
+
+        // Function to update the cart dropdown content
+        function updateCartDropdown() {
+            axios.get('get_cart_contents.php')
+                .then(function (response) {
+                    var cartContent = response.data;
+                    document.querySelector('.cart-content').innerHTML = cartContent;
+                })
+                .catch(function (error) {
+                    console.error('Error fetching cart contents:', error);
+                });
+        }
+
+        // Attach click event to the "Add to Cart" button
+        document.querySelectorAll('.addToCartBtn').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var productId = this.getAttribute('data-product-id');
+                addToCart(productId);
+            });
+        });
+
+        // Update cart dropdown initially
+        updateCartDropdown();
+    </script>
+
+</body>
+
+</html>
